@@ -6,6 +6,12 @@
 <struts>
 
     <package name="default" namespace="/" extends="struts-default">
+    	<!-- <interceptors>
+			<interceptor-stack name="test">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors> -->
+    
 		<!-- 默认调用的action -->
         <default-action-ref name="index" />
 
@@ -18,10 +24,11 @@
         <global-exception-mappings>
             <exception-mapping exception="java.lang.Exception" result="error"/>
         </global-exception-mappings>
-
-        <action name="Login_*" method="{1}" class="welcomeAction">
-            <result name="success">/index.jsp</result>
+		
+		<action name="index">
+            <result type="dispatcher">/index.jsp</result>
         </action>
+		
     </package>
 
     <include file="admin.xml"/>

@@ -57,9 +57,9 @@
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	
-	<bean id="welcomeAction" class="com.hzc.admin.action.WelcomeAction">
-		<property name="welcomeService" ref="welcomeService"></property>
+	<bean id="userAction" class="com.hzc.admin.action.UserAction">
 		<property name="userService" ref="userService"></property>
 	</bean>
-	<bean id="welcomeService" class="com.hzc.admin.service.WelcomeService"></bean>
+	
+	
 </beans>

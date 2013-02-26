@@ -9,25 +9,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    
-    <title>My JSP 'index.jsp' starting page</title>
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+    <title>首页 - 欢迎来到我的Blog</title>
   </head>
   
   <body>
-
-	<form action="Login_test" method="post">
-		<input type="text" name="username">
-		<input type="submit" value="点我">
-	</form>
-	
-	<s:property value="username"/>
+	<h1>我的博客</h1>
+	<div>O(∩_∩)O哈哈~</div>
+	<div><a href="<%=basePath%>admin">点击进入后台管理</a></div>
   </body>
 </html>
