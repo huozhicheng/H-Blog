@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hzc.admin.model;
+package com.blog4j.admin.model;
 
 /**
  * 用户实体

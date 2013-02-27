@@ -1,7 +1,4 @@
-/**
- * 
- */
-package com.hzc.admin.dao;
+package com.blog4j.admin.dao.impl;
 
 import java.util.List;
 
@@ -10,7 +7,8 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.hzc.admin.model.User;
+import com.blog4j.admin.dao.IUserDao;
+import com.blog4j.admin.model.User;
 
 /**
  * 用户管理Dao
@@ -18,8 +16,8 @@ import com.hzc.admin.model.User;
  * @date 2013-2-22下午3:41:36
  * @version 1.0
  */
-public class UserDao {
-	private final static Logger log = Logger.getLogger(UserDao.class);
+public class UserDaoImpl implements IUserDao{
+	private final static Logger log = Logger.getLogger(UserDaoImpl.class);
 	private SessionFactory sessionFactory;
 	
 	public void setSessionFactory(SessionFactory sessionFactory) {
@@ -34,9 +32,9 @@ public class UserDao {
 		this.getCurrentSession().save(user);
 	}
 	public User findByUsernameAndPassword(User user){
-		Query query = this.getCurrentSession().createQuery("from User where username = ? and password = ?");
-		query.setString(0, user.getUsername());
-		query.setString(1, user.getPassword());
+		Query query = this.getCurrentSession().createQuery("from User where username=:username and password=:password");
+		query.setParameter("username", user.getUsername());
+		query.setParameter("password", user.getPassword());
 		List<User> list = query.list();
 		if(list.size()>0){
 			return (User) list.get(0);

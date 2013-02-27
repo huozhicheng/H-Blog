@@ -1,15 +1,16 @@
 /**
  * 
  */
-package com.hzc.admin.service;
+package com.blog4j.admin.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
-import com.hzc.admin.dao.UserDao;
-import com.hzc.admin.model.User;
+import com.blog4j.admin.dao.IUserDao;
+import com.blog4j.admin.model.User;
+import com.blog4j.admin.service.IUserService;
 
 /**
  * 用户管理service
@@ -17,10 +18,10 @@ import com.hzc.admin.model.User;
  * @date 2013-2-21下午5:09:30
  * @version 1.0
  */
-public class UserService {
+public class UserServiceImpl implements IUserService{
 
-	private UserDao userDao;
-	public void setUserDao(UserDao userDao) {
+	private IUserDao userDao;
+	public void setUserDao(IUserDao userDao) {
 		this.userDao = userDao;
 	}
 	

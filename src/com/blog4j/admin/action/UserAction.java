@@ -1,11 +1,11 @@
-package com.hzc.admin.action;
+package com.blog4j.admin.action;
 
 import java.util.Map;
 
 import org.apache.struts2.ServletActionContext;
 
-import com.hzc.admin.model.User;
-import com.hzc.admin.service.UserService;
+import com.blog4j.admin.model.User;
+import com.blog4j.admin.service.IUserService;
 import com.opensymphony.xwork2.ActionSupport;
 
 /**
@@ -16,7 +16,7 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 public class UserAction extends ActionSupport {
 	private static final long serialVersionUID = -3690511690957925008L;
-	private UserService userService;
+	private IUserService userService;
 	private User user;
 	private String tips;
 	
@@ -28,7 +28,7 @@ public class UserAction extends ActionSupport {
 		this.user = user;
 	}
 
-	public void setUserService(UserService userService) {
+	public void setUserService(IUserService userService) {
 		this.userService = userService;
 	}
 	
