@@ -39,7 +39,7 @@ public class UserDao {
 		query.setString(1, user.getPassword());
 		List<User> list = query.list();
 		if(list.size()>0){
-			return (User) query.list().get(0);
+			return (User) list.get(0);
 		}
 		return null;
 	}
