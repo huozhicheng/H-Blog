@@ -25,6 +25,6 @@ public interface IUserDao {
 	 * @param user
 	 * @return
 	 */
-	public User findByUsernameAndPassword(User user);
+	public User findByUsername(User user);
 	
 }

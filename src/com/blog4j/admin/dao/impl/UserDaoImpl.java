@@ -31,10 +31,9 @@ public class UserDaoImpl implements IUserDao{
 	public void addUser(User user){
 		this.getCurrentSession().save(user);
 	}
-	public User findByUsernameAndPassword(User user){
-		Query query = this.getCurrentSession().createQuery("from User where username=:username and password=:password");
+	public User findByUsername(User user){
+		Query query = this.getCurrentSession().createQuery("from User where username=:username");
 		query.setParameter("username", user.getUsername());
-		query.setParameter("password", user.getPassword());
 		List<User> list = query.list();
 		if(list.size()>0){
 			return (User) list.get(0);

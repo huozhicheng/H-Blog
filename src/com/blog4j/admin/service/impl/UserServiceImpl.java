@@ -8,6 +8,9 @@ import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.codec.digest.DigestUtils;
+
 import com.blog4j.admin.dao.IUserDao;
 import com.blog4j.admin.model.User;
 import com.blog4j.admin.service.IUserService;
@@ -30,13 +33,20 @@ public class UserServiceImpl implements IUserService{
 	}
 	public Map<String,Object> userLogin(User user,HttpSession session){
 		Map<String,Object> map = new HashMap<String,Object>();
-		User loginUser = userDao.findByUsernameAndPassword(user);
+		User loginUser = userDao.findByUsername(user);
+		
 		if(loginUser != null){
-			session.setAttribute("username", loginUser.getUsername());
-			map.put("isLogin", true);
+			String md5password = DigestUtils.md5Hex(user.getPassword());
+			if(md5password.equals(loginUser.getPassword())){
+				session.setAttribute("username", loginUser.getUsername());
+				map.put("isLogin", true);
+			}else{
+				map.put("isLogin", false);
+				map.put("tips", "密码错误！");
+			}
 		}else{
 			map.put("isLogin", false);
-			map.put("tips", "登录失败！");
+			map.put("tips", "此用户不存在！");
 		}
 		return map;
 	}
