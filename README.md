@@ -1,6 +1,10 @@
 Blog4J
 ======
 
+2013年2月20日
+
 基于java的博客系统
-使用框架Struts2.3.8+Spring3.2.1+Hibernate4.1.9
-css框架为：bootstrap
+
+系统架构  - (Struts2.3.8 + Spring3.2.1 + Hibernate4.1.9)
+
+css 框架 - bootstrap
