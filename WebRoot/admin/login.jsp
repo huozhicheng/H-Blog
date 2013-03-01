@@ -11,29 +11,39 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>用户登录</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
   </head>
   
   <body>
   	<h3 style="margin-left: 50px;">用户登录</h3>
-  	<form action="admin/userlogin" method="post">
-  		<div>
-  			<ul style="list-style: none;">
-  				<li><input type="text" name="user.username"> </li>
-  				<li><input type="password" name="user.password"></li>
-  				<li><input type="submit" value="登录" ></li>
-  				<li><s:property value="tips"/></li>
-  			</ul>
-  		</div>
-  	</form>
+  	
+  	<form class="form-horizontal" action="admin/userlogin" method="post">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">username</label>
+    <div class="controls">
+    	<input type="text" name="user.username">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Password</label>
+    <div class="controls">
+    	<input type="password" name="user.password" placeholder="Password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <!-- <label class="checkbox">
+        <input type="checkbox"> Remember me
+      </label> -->
+      <button type="submit" class="btn btn-primary">Sign in</button>
+      <s:property value="tips"/>
+    </div>
+  </div>
+</form>
+  	
   </body>
 </html>
