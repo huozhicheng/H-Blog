@@ -15,4 +15,4 @@ H-Blog
 * MySql
 
 #### css 框架: ####
-* bootstrap
+* bootstrap v2.2.2
