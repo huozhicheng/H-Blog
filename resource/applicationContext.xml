@@ -45,19 +45,19 @@
   	</tx:advice>
   	   
   	<aop:config>
-  		<aop:pointcut id="argorseServiceMethods" expression="execution(* com.blog4j.admin.service..*.*(..))"/>
+  		<aop:pointcut id="argorseServiceMethods" expression="execution(* com.hblog.admin.service..*.*(..))"/>
   		<aop:advisor advice-ref="txAdvice" pointcut-ref="argorseServiceMethods"/>
   	</aop:config>
     
-    <bean id="userDao" class="com.blog4j.admin.dao.impl.UserDaoImpl">
+    <bean id="userDao" class="com.hblog.admin.dao.impl.UserDaoImpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 	
-	<bean id="userService" class="com.blog4j.admin.service.impl.UserServiceImpl">
+	<bean id="userService" class="com.hblog.admin.service.impl.UserServiceImpl">
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 	
-	<bean id="userAction" class="com.blog4j.admin.action.UserAction">
+	<bean id="userAction" class="com.hblog.admin.action.UserAction">
 		<property name="userService" ref="userService"></property>
 	</bean>
 	

@@ -14,6 +14,6 @@
         <!-- 输出sql语句 -->
         <property name="hibernate.show_sql">true</property>
         
-        <mapping resource="com/blog4j/admin/model/User.hbm.xml"/>
+        <mapping resource="com/hblog/admin/model/User.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>
