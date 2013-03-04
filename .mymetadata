@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="Blog4J"
+  name="H-Blog"
   id="myeclipse.1361158449917"
-  context-root="/Blog4J"
+  context-root="/blog"
   j2ee-spec="6.0"
-  archive="Blog4J.war">
+  archive="H-Blog.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
