@@ -4,7 +4,7 @@
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/resource"/>
-        <property name="context-root" value="/Blog4J"/>
         <property name="java-output-path" value="/Blog4J/WebRoot/WEB-INF/classes"/>
+        <property name="context-root" value="/blog"/>
     </wb-module>
 </project-modules>
