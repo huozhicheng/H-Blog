@@ -16,7 +16,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link rel="stylesheet" href="css/font-awesome.min.css">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+	<style type="text/css">
+		body {
+	        padding-top: 40px;
+	        padding-bottom: 40px;
+	        background-color: #f5f5f5;
+		}
+	</style>
   </head>
   
   <body>
