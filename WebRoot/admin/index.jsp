@@ -4,25 +4,30 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
   <head>
     <base href="<%=basePath%>">
-    
     <title>后台管理中心</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
-
   </head>
   
   <body>
 	<h2>欢迎来到Blog4J后台管理中心</h2>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+			<!--Sidebar content-->
+			</div>
+			<div class="span10">
+			<!--Body content-->
+			</div>
+		</div>
+	</div>
   </body>
 </html>

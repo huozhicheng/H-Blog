@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <title>用户登录</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
 	<script src="js/jquery-1.8.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
