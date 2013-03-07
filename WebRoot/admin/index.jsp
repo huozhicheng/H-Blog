@@ -17,15 +17,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-	<h2>欢迎来到Blog4J后台管理中心</h2>
 	
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<div class="span2">
-			<!--Sidebar content-->
+	<div class="row-fluid">
+		<div class="offset1 span10" style="height: 500px;background-color: red;">
+			<div class="row-fluid">
+				<div class="span12" style="background-color: blue;">
+					<h2>欢迎来到H-Blog后台管理中心</h2>
+				</div>
 			</div>
-			<div class="span10">
-			<!--Body content-->
+			<div class="row-fluid">
+				<div class="span2" style="background-color: green;">
+				<!--Sidebar content-->
+				</div>
+				<div class="span10" style="background-color: orange;">
+				<!--Body content-->
+				</div>
 			</div>
 		</div>
 	</div>
