@@ -27,9 +27,6 @@
         </action>
     	
         <action name="user*" method="{1}" class="userAction">
-        	<!-- 使用拦截器验证是否登陆  -->  
-            <interceptor-ref name="mydefault" />
-            
         	<result name="success" type="redirectAction">
                 <param name="actionName">index</param>
                 <param name="namespace">/admin</param>
