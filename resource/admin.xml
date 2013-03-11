@@ -6,12 +6,30 @@
 <struts>
     <package name="admin" namespace="/admin" extends="struts-default">
     	
+    	<!-- 定义一个拦截器 -->  
+        <interceptors>  
+            <interceptor name="authority"  
+                class="com.hblog.admin.interceptot.LoginInterceptor">  
+            </interceptor>  
+            <!-- 拦截器栈 -->  
+            <interceptor-stack name="mydefault">  
+                <interceptor-ref name="defaultStack" />  
+                <interceptor-ref name="authority" />  
+            </interceptor-stack>  
+        </interceptors>
+    	
     	<default-action-ref name="index" />
     	<action name="index">
+    		<!-- 使用拦截器验证是否登陆 -->  
+            <interceptor-ref name="mydefault" />
             <result type="dispatcher">/admin/index.jsp</result>
+            <result name="login" type="redirect">/admin/login.jsp</result>
         </action>
     	
         <action name="user*" method="{1}" class="userAction">
+        	<!-- 使用拦截器验证是否登陆  -->  
+            <interceptor-ref name="mydefault" />
+            
         	<result name="success" type="redirectAction">
                 <param name="actionName">index</param>
                 <param name="namespace">/admin</param>
