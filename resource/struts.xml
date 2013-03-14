@@ -4,17 +4,8 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-
     <package name="default" namespace="/" extends="struts-default">
-    	<!-- <interceptors>
-			<interceptor-stack name="test">
-				<interceptor-ref name="defaultStack"></interceptor-ref>
-			</interceptor-stack>
-		</interceptors> -->
     
-		<!-- 默认调用的action -->
-        <default-action-ref name="index" />
-
 		<!-- 全局的result -->
         <global-results>
             <result name="error">/error.jsp</result>
@@ -24,15 +15,8 @@
         <global-exception-mappings>
             <exception-mapping exception="java.lang.Exception" result="error"/>
         </global-exception-mappings>
-		
-		<action name="index">
-            <result type="dispatcher">/index.jsp</result>
-        </action>
-		
     </package>
 
     <include file="admin.xml"/>
-
     <!-- Add packages here -->
-
 </struts>
