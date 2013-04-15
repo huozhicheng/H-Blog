@@ -13,7 +13,7 @@
     <!-- 数据源c3p0 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 	    <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-	    <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/blogdb"/>
+	    <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/blogdb?useUnicode=true&amp;characterEncoding=utf8"/>
 	    <property name="user" value="root"/>
 	    <property name="password" value="root"/>
 	</bean>
@@ -45,8 +45,8 @@
   	</tx:advice>
   	   
   	<aop:config>
-  		<aop:pointcut id="argorseServiceMethods" expression="execution(* com.hblog.admin.service..*.*(..))"/>
-  		<aop:advisor advice-ref="txAdvice" pointcut-ref="argorseServiceMethods"/>
+  		<aop:pointcut id="HBlogServiceMethods" expression="execution(* com.hblog.admin.service..*.*(..))"/>
+  		<aop:advisor advice-ref="txAdvice" pointcut-ref="HBlogServiceMethods"/>
   	</aop:config>
     
     <bean id="userDao" class="com.hblog.admin.dao.impl.UserDaoImpl">
@@ -61,5 +61,14 @@
 		<property name="userService" ref="userService"></property>
 	</bean>
 	
+	<bean id="postsDao" class="com.hblog.admin.dao.impl.PostsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="postsService" class="com.hblog.admin.service.impl.PostsServiceImpl">
+		<property name="postsDao" ref="postsDao"></property>
+	</bean>
+	<bean id="PostsAction" class="com.hblog.admin.action.PostsAction">
+		<property name="postsService" ref="postsService"></property>
+	</bean>
 	
 </beans>
