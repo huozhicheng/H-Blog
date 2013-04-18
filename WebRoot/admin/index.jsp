@@ -89,7 +89,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								<a href="#"><i class="icon-cog"></i> 基本设置</a>
 							</li>
 						</ul>
-						<div class="well well-small" style="margin-top: 20px">
+						<div class="well" style="margin-top: 20px">
 							<p>
 								<a href="http://weibo.com/22817237" target="_blank"><span class="badge badge-info">Weibo</span></a>
 								<a href="https://github.com/huozhicheng/H-Blog" target="_blank"><span class="badge badge-info">Github</span></a>
@@ -133,9 +133,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 										<td>Horrion</td>
 										<td style="text-align: center;">
 											<div class="btn-group">
-												<a href="#" title="查看" class="btn btn-small btn-info"><i class="icon-eye-open"></i></a>
-												<a href="#" title="编辑" class="btn btn-small btn-primary"><i class="icon-edit"></i></a>
-												<a href="#" title="删除" class="btn btn-small btn-warning"><i class="icon-trash"></i></a>
+												<a href="#" title="查看" class="btn btn-small"><i class="icon-eye-open"></i></a>
+												<a href="#" title="编辑" class="btn btn-small"><i class="icon-edit"></i></a>
+												<a href="#" title="删除" class="btn btn-small"><i class="icon-trash"></i></a>
 											</div>
 										</td>
 									</tr>
