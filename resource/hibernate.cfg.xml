@@ -12,6 +12,7 @@
         
         <!-- 输出sql语句 -->
         <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
         
         <mapping class="com.hblog.admin.model.User"/>
         <mapping class="com.hblog.admin.model.Posts"/>
